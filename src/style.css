@@ -1,0 +1,128 @@
+:root{
+
+   --color-primary: #fff;
+   --color-secundary: #f0f;
+   --color-tertiary: #0f0;
+   --color-accent: #00f;
+
+   --fs-12: 0.75rem;
+   --fs-14: 0.875rem;
+   --fs-16: 1rem;
+   --fs-18: 1.125rem;
+   --fs-20: 1.25rem;
+   --fs-24: 1.5rem;
+   --fs-32: 2rem;
+
+   --fw-tittle: 700;
+   --fw-sub-tittle: 500;
+   --fw-quote: 300;
+
+   --space-section: 2rem 0;
+   --sie-16: 1rem;
+   --sbe-24: 1.5rem;
+   --soe-32: 2rem;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif; 
+}
+
+a, li{
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: var(--color-primary);
+    max-width: 90rem;
+    padding: 0 5rem
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: var(--sbe-24) 0;
+}
+
+main aside{
+    width: 10rem;
+    height: 20rem;
+}
+
+main aside ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--soe-32);
+    font-size: var(--fs-20);
+}
+
+main .presentation{
+    width: 40%;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--sbe-24);
+    gap: var(--sbe-24)
+}
+
+main .presentation h2{
+    font-size: var(--fs-32)
+}
+
+main .presentation h3{
+    font-size: var(--fs-20);
+}
+
+main .presentation li{
+    font-size: var(--fs-18)
+}
+
+main .product{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--sie-16);
+}
+
+main .product .product-tune{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: var(--sie-16);
+}
+
+main .product .product-tune label{
+    font-size: var(--fs-18);
+    font-weight: var(--fw-tittle)
+}
+
+main .product h3{
+    font-size: var(--fs-24);
+}
+
+main .tune-colors{
+    display: flex;
+    gap: 0.5rem;
+}
+
+main .product .tune-colors button{
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 50%;
+}
+
+main .product img{
+    width: 350px;
+    height: 350px
+    
+}
