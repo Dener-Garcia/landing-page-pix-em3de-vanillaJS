@@ -1,9 +1,12 @@
 :root{
 
-   --color-primary: #fff;
-   --color-secundary: #f0f;
-   --color-tertiary: #0f0;
-   --color-accent: #00f;
+   --color-primary: #f9f9f9;
+   --color-secundary: #2e5e80;
+   --color-tertiary: #3d3d3d;
+   --color-accent: #4286ee;
+
+   --contrast-light: #e4ecf1;
+   --contrast-dark: #16191b;
 
    --fs-12: 0.75rem;
    --fs-14: 0.875rem;
@@ -11,7 +14,9 @@
    --fs-18: 1.125rem;
    --fs-20: 1.25rem;
    --fs-24: 1.5rem;
+   --fs-28: 1.75rem;
    --fs-32: 2rem;
+   --fs-52: 3.185rem;
 
    --fw-tittle: 700;
    --fw-sub-tittle: 500;
@@ -21,6 +26,9 @@
    --sie-16: 1rem;
    --sbe-24: 1.5rem;
    --soe-32: 2rem;
+
+   --mw-1440: 90rem;
+   --w-1280: 80rem;
 }
 
 *{
@@ -37,15 +45,18 @@ a, li{
 
 body{
     background-color: var(--color-primary);
-    max-width: 90rem;
-    padding: 0 5rem
 }
 
 main{
-    width: 100%;
+    max-width: var(--mw-1440);
+    width: var(--w-1280);
+    height: 720px;
     display: flex;
+    margin: auto;
     justify-content: space-evenly;
     padding: var(--sbe-24) 0;
+    background-color: var(--color-primary);
+    color: var(--contrast-dark)
 }
 
 main aside{
@@ -64,23 +75,57 @@ main aside ul{
 
 main .presentation{
     width: 40%;
-    margin-top: 8%;
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
-    padding: 0 var(--sbe-24);
-    gap: var(--sbe-24)
+    padding: var(--sbe-24);
+    gap: var(--sbe-24);
+    font-size: var(--fs-18);
 }
 
-main .presentation h2{
-    font-size: var(--fs-32)
+main .presentation .presentation-intro h2{
+    position: relative;
+    margin-bottom: var(--sie-16);
+    font-size: var(--fs-52);
 }
 
-main .presentation h3{
+main .presentation .presentation-intro h2::after{
+    content: "";
+    position: absolute;
+    width: 17rem;
+    height: var(--fs-24);
+    left: 0;
+    top: 1.75rem;
+    border-radius: 10rem;
+    background-color: blue;
+    transform: rotate(-1deg);
+   opacity: 0.4;
+
+}
+
+main .presentation .presentation-detail{
+    gap: var(--sie-16);
+}
+
+main .presentation .presentation-detail h3{
+    margin-bottom: var(--sie-16);
     font-size: var(--fs-20);
 }
 
-main .presentation li{
-    font-size: var(--fs-18)
+main .presentation .presentation-detail ul{
+    display: grid;
+    gap: var(--sie-16);
+}
+
+main .presentation .presentation-detail ul li{
+    display: flex;
+    align-items: center;
+    gap: var(--sie-16);
+}
+
+main .presentation .presentation-detail .icons{
+    font-size: var(--fs-32);
+    color: var(--color-secundary);
 }
 
 main .product{
@@ -122,7 +167,13 @@ main .product .tune-colors button{
 }
 
 main .product img{
-    width: 350px;
-    height: 350px
+    width: 550px;
     
+}
+
+footer{
+    width: 100%;
+    height: 10vh;
+    padding: var(--fs-24);
+    background-color: var(--color-tertiary);
 }
