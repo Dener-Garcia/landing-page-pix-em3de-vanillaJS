@@ -1,7 +1,7 @@
 :root{
 
    --color-primary: #f9f9f9;
-   --color-secundary: #2e5e80;
+   --color-secundary: #e48416;
    --color-tertiary: #3d3d3d;
    --color-accent: #4286ee;
 
@@ -43,6 +43,22 @@ a, li{
     list-style: none;
 }
 
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.fadeJS{
+    animation: fade 0.3s linear;
+}
+
 body{
     background-color: var(--color-primary);
 }
@@ -70,12 +86,14 @@ main aside ul{
     flex-direction: column;
     justify-content: center;
     gap: var(--soe-32);
-    font-size: var(--fs-20);
+}
+
+main aside ul li a{
+    text-decoration: none;
 }
 
 main .presentation{
     width: 40%;
-    margin-top: 5%;
     display: flex;
     flex-direction: column;
     padding: var(--sbe-24);
@@ -162,13 +180,48 @@ main .tune-colors{
 main .product .tune-colors button{
     width: 2rem;
     height: 2rem;
-    border: none;
+    border: solid 2px var(--color-tertiary);
     border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+main .product .tune-colors button:hover,
+main .product .tune-colors button:focus{
+    transform: scale(1.3);
+    border-color: var(--color-accent);
+}
+
+#white{
+    background-color: #ced4d8;
+}
+
+#black{
+    background-color: #16191b;
+}
+
+#blue{
+    background-color: #7ea1b8;
+}
+
+#orange{
+    background-color: #e97312;
+}
+
+#pink{
+    background-color: #ff2b9f;
+}
+
+#grey{
+    background-color: #7a7a7a;
+}
+
+#gold{
+    background-color: #9e692d;
 }
 
 main .product img{
     width: 550px;
-    
 }
 
 footer{
