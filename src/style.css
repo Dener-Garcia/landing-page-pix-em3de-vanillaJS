@@ -55,6 +55,50 @@ li {
   }
 }
 
+@keyframes reveralLeft{
+  0% {
+    opacity: 0;
+    transform: scale(0.01);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes reveralUp{
+  0% {
+    opacity: 0;
+    transform: translateY(36rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes moving {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(1rem)
+  }
+}
+
+.reveral-up{
+  animation: reveralUp 1s linear;
+}
+
+
+.reveral-left{
+  animation: reveralLeft 0.6s linear;
+}
+
+.moveX{
+  animation: moving 1s alternate ease-in-out infinite;
+}
+
 .btn-cta {
   border: none;
   border-bottom: solid 0.4rem var(--color-tertiary);
@@ -120,20 +164,21 @@ main aside a{
 main aside a::after{
     position: absolute;
     content: "";
-    width: 100%;
+    width: 0;
     left: 0;
-    bottom: -0.1rem;
+    bottom: 0;
     height: 0.35rem;
     border-radius: 2rem;
     background-color: var(--color-accent);
-    transform: translate(60px) rotate(-2deg);
+    transform: rotate(-2deg);
     opacity: 0;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 
 main aside a:hover::after{
-    transform: translate(0) rotate(-2deg);
+    
+    width: 100%;
     opacity: 1;
 }
 
@@ -176,7 +221,7 @@ main .presentation .presentation-detail {
 
 main .presentation .presentation-detail h3 {
   margin-bottom: var(--sie-16);
-  font-size: var(--fs-20);
+  font-size: var(--fs-24);
 }
 
 main .presentation .presentation-detail ul {
@@ -188,6 +233,7 @@ main .presentation .presentation-detail ul li {
   display: flex;
   align-items: center;
   gap: var(--sie-16);
+  font-size: var(--fs-20);
 }
 
 main .presentation .presentation-detail .icons {
