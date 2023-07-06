@@ -331,7 +331,7 @@ main .container {
   color: var(--contrast-dark);
 }
 
-.illustration {
+main .container .illustration {
   border-radius: 100rem 100rem 5rem 5rem;
   padding: 2rem;
   background-color: var(--color-secundary);
@@ -390,7 +390,7 @@ main .container-use h3::after {
   left: 0;
   top: 2.75rem;
   border-radius: 5rem 3rem 2rem 2rem;
-  background-color: blue;
+  background-color: var(--color-accent);
   transform: rotate(-1deg);
   opacity: 0.4;
 }
@@ -456,4 +456,66 @@ footer .madeFor span a {
 
 footer .madeFor span a:hover {
   color: var(--color-accent);
+}
+
+@media screen and (max-width: 960px) {
+  main .container-main{
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+  }
+
+  main aside{
+    
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  main aside ul{
+    flex-direction: row;
+    font-size: var(--fs-18);
+  }
+
+
+main .presentation{
+  width: 100%;
+}  
+  main .presentation .presentation-intro{
+    
+    background-color: red;
+  }
+
+  main .product{
+    width: 100%;
+  }
+
+  main .container{
+    
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  main .container .illustration{
+    width: 100%;
+    padding: 0rem;
+    background-color: red;
+  }
+
+  MAIN .container .illustration svg{
+    width: 100%;
+  }
+
+  main .container-use{
+    width: 100%;
+    height: auto;
+  }
+
+  footer p{
+    width: 80%;
+  }
+
 }
