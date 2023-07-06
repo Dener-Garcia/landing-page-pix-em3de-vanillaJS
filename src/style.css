@@ -43,67 +43,91 @@ li {
   list-style: none;
 }
 
-@keyframes fade {
+@keyframes movingY {
   0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
+    transform: translateY(30px);
   }
   100% {
-    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes reveralLeft{
+@keyframes movingX {
   0% {
-    opacity: 0;
-    transform: scale(0.01);
+    transform: translateX(10px);
   }
-  100%{
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes reveralUp{
-  0% {
-    opacity: 0;
-    transform: translateY(36rem);
-  }
-  100%{
-    opacity: 1;
-    transform: translateY(0rem);
-  }
-}
-
-@keyframes moving {
-  0%{
+  100% {
     transform: translateX(0);
   }
-  100%{
-    transform: translateX(1rem)
-  }
 }
 
-.reveral-up{
-  animation: reveralUp 1s linear;
+.animation-up {
+  opacity: 0;
+  transform: translateY(240px);
+  transition: 0.5s ease-in-out;
 }
 
-
-.reveral-left{
-  animation: reveralLeft 0.6s linear;
+.reveral-up {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.moveX{
-  animation: moving 1s alternate ease-in-out infinite;
+.animation-left {
+  transform: scale(0.01);
+  transition: 0.5s ease-in-out;
+}
+
+.reveral-left {
+  transform: scale(1);
+}
+
+.girlAnimation {
+  transform: translate(280px);
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.girlAnimationOn {
+  transform: translate(0px);
+  opacity: 1;
+}
+
+.moveY {
+  animation: movingY 1s alternate ease-in-out infinite;
+}
+
+.moveX {
+  animation: movingX 1s alternate ease-in-out infinite;
+}
+.moveX1 {
+  animation: movingX 1s alternate 0.2s ease-in-out infinite;
+}
+
+.moveX2 {
+  animation: movingX 1s alternate 0.4s ease-in-out infinite;
+}
+
+.moveX3 {
+  animation: movingX 1s alternate 0.6s ease-in-out infinite;
+}
+
+.moveX4 {
+  animation: movingX 1s alternate 0.8s ease-in-out infinite;
+}
+
+.moveX5 {
+  animation: movingX 1s alternate 1s ease-in-out infinite;
+}
+
+.desktop-hidden {
+  display: none;
 }
 
 .btn-cta {
   border: none;
-  border-bottom: solid 0.4rem var(--color-tertiary);
+  border-bottom: solid 0.5rem var(--color-tertiary);
   padding: 1rem 2rem;
-  border-radius: 0.5rem;
+  border-radius: 5rem;
   background-color: var(--color-accent);
   font-size: var(--fs-24);
   font-weight: var(--fw-tittle);
@@ -125,28 +149,35 @@ body {
 
 main .container-main {
   max-width: var(--mw-1440);
-  width: var(--w-1280);
+  width: 100%;
   height: 100dvh;
   display: flex;
   margin: auto;
   justify-content: space-evenly;
-  padding: var(--sbe-24) 0;
+  padding: 1.5rem 1rem;
   background-color: var(--color-primary);
   color: var(--contrast-dark);
 }
 
 main aside {
-  width: 12rem;
+  min-width: 12rem;
   height: 20rem;
 }
 
-main aside h1{
-    width: 100%;
-    font-size: var(--fs-32);
+main aside h1 {
+  width: 100%;
+  font-size: var(--fs-32);
+  color: var(--contrast-dark); 
+}
+
+main aside h1 span{
+  font-family: 'Monoton', cursive;
+  color: var(--color-accent);
 }
 
 main aside ul {
   height: 100%;
+  margin-top: var(--sbe-24);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,32 +187,29 @@ main aside ul {
   text-transform: uppercase;
 }
 
-main aside a{
-    position: relative;
-    color: var(--contrast-dark);
+main aside a {
+  position: relative;
+  color: var(--contrast-dark);
 }
 
-main aside a::after{
-    position: absolute;
-    content: "";
-    width: 0;
-    left: 0;
-    bottom: 0;
-    height: 0.35rem;
-    border-radius: 2rem;
-    background-color: var(--color-accent);
-    transform: rotate(-2deg);
-    opacity: 0;
-    transition: 0.3s;
+main aside a::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: 0;
+  height: 0.35rem;
+  border-radius: 2rem;
+  background-color: var(--color-accent);
+  transform: rotate(-2deg);
+  opacity: 0;
+  transition: 0.3s;
 }
 
-
-main aside a:hover::after{
-    
-    width: 100%;
-    opacity: 1;
+main aside a:hover::after {
+  width: 100%;
+  opacity: 1;
 }
-
 
 main .presentation {
   width: 40%;
@@ -210,9 +238,9 @@ main .presentation .presentation-intro h2::after {
   left: 0;
   top: 2.75rem;
   border-radius: 5rem 3rem 2rem 2rem;
-  background-color: blue;
+  background-color: var(--color-accent);
   transform: rotate(-1deg);
-  opacity: 0.4;
+  opacity: 0.7;
 }
 
 main .presentation .presentation-detail {
@@ -259,6 +287,7 @@ main .product .product-tune {
 }
 
 main .product .product-tune label {
+  width: 100%;
   font-size: var(--fs-18);
   font-weight: var(--fw-tittle);
 }
@@ -316,29 +345,31 @@ main .product .tune-colors button:focus {
 }
 
 main .product img {
-  width: 580px;
+  max-width: 580px;
+  width: 100%;
 }
 
 main .container {
   max-width: var(--mw-1440);
-  width: var(--w-1280);
+  width: 100%;
   height: 100dvh;
   position: relative;
   margin: auto;
   display: flex;
-  padding: var(--space-section);
+  padding: 5rem 1rem;
   background-color: var(--color-primary);
   color: var(--contrast-dark);
 }
 
 main .container .illustration {
+  height: 50%;
   border-radius: 100rem 100rem 5rem 5rem;
   padding: 2rem;
   background-color: var(--color-secundary);
 }
 
 main .container .container-description h3 {
-  width: 100%;
+  width: auto;
   position: relative;
   margin-bottom: var(--fs-52);
   font-size: var(--fs-52);
@@ -347,31 +378,32 @@ main .container .container-description h3 {
 main .container .container-description h3::after {
   content: "";
   position: absolute;
-  width: 19rem;
+  width: 12rem;
   height: var(--fs-20);
-  right: 0;
-  bottom: 0;
+  left: 0;
+  top: 2.8rem;
   border-radius: 5rem 3rem 2rem 2rem;
-  background-color: blue;
+  background-color: var(--color-accent);
   transform: rotate(-1deg);
-  opacity: 0.4;
+  opacity: 0.7;
 }
 
 main .container .container-description p {
+
   margin-bottom: var(--sie-16);
   font-size: var(--fs-20);
 }
 
 main .container-use {
   max-width: var(--mw-1440);
-  width: var(--w-1280);
-  height: 100dvh;
+  width: 100%;
+  height: auto;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--space-section);
+  padding: 8rem 1rem;
   background-color: var(--color-primary);
   color: var(--contrast-dark);
 }
@@ -392,7 +424,7 @@ main .container-use h3::after {
   border-radius: 5rem 3rem 2rem 2rem;
   background-color: var(--color-accent);
   transform: rotate(-1deg);
-  opacity: 0.4;
+  opacity: 0.7;
 }
 
 main .container-use ul {
@@ -450,8 +482,8 @@ footer .madeFor {
 }
 
 footer .madeFor span a {
-    color: var(--contrast-light);
-    transition: 0.2s;
+  color: var(--contrast-light);
+  transition: 0.2s;
 }
 
 footer .madeFor span a:hover {
@@ -459,63 +491,134 @@ footer .madeFor span a:hover {
 }
 
 @media screen and (max-width: 960px) {
-  main .container-main{
+  .mobile-hidden {
+    display: none;
+  }
+
+  .desktop-hidden {
+    display: block;
+  }
+
+  .btn-cta {
+    width: 100%;
+    font-size: var(--fs-20);
+  }
+
+  main .container-main {
     width: 100%;
     flex-direction: column;
     height: auto;
     justify-content: center;
+    padding: var(--sie-16);
   }
 
-  main aside{
-    
+  main .container-main aside {
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: center;
   }
 
-  main aside ul{
+  main .container-main aside ul {
+    margin-top: var(--soe-32);
     flex-direction: row;
+    font-size: var(--fs-20);
+  }
+
+  main .container-main .presentation {
+    width: 100%;
+    padding: 0;
+  }
+
+  main .container-main .presentation h2 {
+    margin-top: var(--sbe-24);
+    font-size: var(--fs-32);
+  }
+
+  main .container-main .presentation h2::after {
+    width: 11rem;
+    height: 0.75rem;
+    top: 1.75rem;
+  }
+
+  main .container-main .presentation .presentation-detail ul li {
     font-size: var(--fs-18);
   }
 
-
-main .presentation{
-  width: 100%;
-}  
-  main .presentation .presentation-intro{
-    
-    background-color: red;
-  }
-
-  main .product{
+  main .container-main .product {
     width: 100%;
   }
 
-  main .container{
-    
+  main .container-main .product img {
+    margin-top: var(--sbe-24);
+    width: 100%;
+  }
+
+  main .container-main .product .product-tune {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  main .container-main .product .product-tune a {
+margin: auto;
+    margin-top: var(--sbe-24);
+  }
+
+  main .container {
     width: 100%;
     height: auto;
     flex-direction: column;
+    padding: 5rem var(--sie-16);
   }
 
-  main .container .illustration{
+  main .container .container-description h3 {
+    font-size: var(--fs-32);
+  }
+
+  main .container .container-description h3::after {
+    width: 11rem;
+    height: 0.75rem;
+    top: 1.75rem;
+    left: 9rem;
+  }
+
+  main .container .container-description p {
+    font-size: var(--fs-18);
+  }
+
+  main .container .illustration {
     width: 100%;
+    margin-top: var(--sbe-24);
     padding: 0rem;
-    background-color: red;
   }
 
-  MAIN .container .illustration svg{
+  main .container .illustration svg {
     width: 100%;
   }
 
-  main .container-use{
+  main .container-use {
     width: 100%;
     height: auto;
+    padding: var(--sie-16);
   }
 
-  footer p{
+  main .container-use h3 {
+    font-size: var(--fs-32);
+  }
+
+  main .container-use h3::after {
+    width: 13rem;
+    top: 1.7rem;
+    height: 0.75rem;
+  }
+
+  main .container-use ul li {
+    font-size: var(--fs-18);
+  }
+
+  footer {
+    margin-top: var(--sbe-24);
+  }
+
+  footer p {
     width: 80%;
   }
-
 }

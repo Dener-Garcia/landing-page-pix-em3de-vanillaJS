@@ -68,23 +68,24 @@ btnBlack.addEventListener("click", () => {
 // animations
 
 const reveralUP = document.querySelectorAll(".animation-up")
-const reveralLeft = document.querySelectorAll(".reveral-left")
+const reveralLeft = document.querySelectorAll(".animation-left")
+const reveralGirl = document.querySelectorAll(".girlAnimation")
 
 const animationUP = () =>{
 
 reveralUP.forEach((e) => {
     let windowHeight = window.innerHeight
     let elementAtTop = e.getBoundingClientRect().top
-    let elementVisible = 100
+    let elementVisible = 10
 
     if (elementAtTop < windowHeight - elementVisible) {
         e.classList.add("reveral-up")
-        console.log("entrou na funcio")
     } else {
         e.classList.remove("reveral-up")
     }
 });
 }
+
 window.addEventListener("scroll", animationUP)
 
 const animationLeft = () =>{
@@ -92,22 +93,39 @@ const animationLeft = () =>{
     reveralLeft.forEach((e) => {
         let windowHeight = window.innerHeight
         let elementAtTop = e.getBoundingClientRect().top
-        let elementVisible = 100
+        let elementVisible = 10
     
         if (elementAtTop < windowHeight - elementVisible) {
             e.classList.add("reveral-left")
-            console.log("entrou na funcio left")
         } else {
             e.classList.remove("reveral-left")
         }
     });
     }
     window.addEventListener("scroll", animationLeft)
+
+    const animationGirl = () =>{
+
+        reveralGirl.forEach((e) => {
+            let windowHeight = window.innerHeight
+            let elementAtTop = e.getBoundingClientRect().top
+            let elementVisible = 200
+        
+            if (elementAtTop < windowHeight - elementVisible) {
+                e.classList.add("girlAnimationOn")
+                console.log("entrou na funcio garota")
+            } else {
+                e.classList.remove("girlAnimationOn")
+            }
+        });
+        }
+
+        window.addEventListener("scroll", animationGirl)
     
 
 
 
 
 
-
+//svg-dg-qrcode
 
