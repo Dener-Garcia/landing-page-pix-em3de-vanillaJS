@@ -8,12 +8,14 @@ const btnGold = document.querySelector("#gold")
 const productImg = document.querySelector(".product img")
 
 function changeImg(path) {
-    productImg.classList.toggle("fadeJS")
+ 
     productImg.setAttribute("src", path)
+    productImg.classList.toggle("fadeJS")
+    console.log("entrei na function")
 
     setTimeout(() => {
         productImg.classList.toggle("fadeJS")
-    }, 400);
+    }, 200);
 }
 
 btnWhite.addEventListener("click", () => {
@@ -113,7 +115,6 @@ const animationLeft = () =>{
         
             if (elementAtTop < windowHeight - elementVisible) {
                 e.classList.add("girlAnimationOn")
-                console.log("entrou na funcio garota")
             } else {
                 e.classList.remove("girlAnimationOn")
             }

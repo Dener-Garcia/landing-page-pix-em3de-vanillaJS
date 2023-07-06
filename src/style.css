@@ -61,6 +61,15 @@ li {
   }
 }
 
+@keyframes fade {
+  0%{
+    opacity: 0;
+  };
+  100%{
+    opacity: 1;
+  };
+}
+
 .animation-up {
   opacity: 0;
   transform: translateY(240px);
@@ -140,7 +149,7 @@ li {
 }
 
 .fadeJS {
-  animation: fade 0.3s linear;
+  animation: fade 0.9s linear;
 }
 
 body {
@@ -461,7 +470,8 @@ footer {
 }
 
 footer img {
-  width: 10rem;
+  width: 5rem;
+  height: auto;
 }
 
 footer p {
@@ -515,6 +525,7 @@ footer .madeFor span a:hover {
   main .container-main aside {
     width: 100%;
     height: auto;
+    display: none;
   }
 
   main .container-main aside ul {
@@ -550,6 +561,7 @@ footer .madeFor span a:hover {
   main .container-main .product img {
     margin-top: var(--sbe-24);
     width: 100%;
+    height: auto;
   }
 
   main .container-main .product .product-tune {
