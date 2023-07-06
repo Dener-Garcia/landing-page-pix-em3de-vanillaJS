@@ -356,6 +356,7 @@ main .product .tune-colors button:focus {
 main .product img {
   max-width: 580px;
   width: 100%;
+  max-width: 580px;
 }
 
 main .container {
@@ -471,7 +472,7 @@ footer {
 
 footer img {
   width: 5rem;
-  height: auto;
+  height: 5rem;
 }
 
 footer p {
