@@ -11,7 +11,7 @@ function changeImg(path) {
  
     productImg.setAttribute("src", path)
     productImg.classList.add("fadeJS")
-
+    productImg.style.filter = "grayscale(0)"
 
     setTimeout(() => {
         productImg.classList.remove("fadeJS")
@@ -20,6 +20,7 @@ function changeImg(path) {
 
 btnWhite.addEventListener("click", () => {
     changeImg(path = "/public/orange.opti.webp")
+    productImg.style.filter = "grayscale(1)"
 
     btnBlue.addEventListener("click", () => {
         changeImg(path = "/public/azul-off.opti.webp")
@@ -49,6 +50,7 @@ btnWhite.addEventListener("click", () => {
 
 btnBlack.addEventListener("click", () => {
     changeImg(path = "/public/orange-dark.opti.webp")
+    productImg.style.filter = "grayscale(1)"
 
     btnBlue.addEventListener("click", () => {
         changeImg(path = "/public/azul-off-dark.opti.webp")
@@ -74,7 +76,6 @@ btnBlack.addEventListener("click", () => {
         changeImg(path = "/public/gold-dark.opti.webp")
         btnBlack.focus()
     })
-
 })
 
 // animations

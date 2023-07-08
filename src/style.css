@@ -149,7 +149,7 @@ li {
 }
 
 .fadeJS {
-  animation: fade 0.9s linear;
+  animation: fade 0.2s linear;
 }
 
 body {
@@ -334,7 +334,7 @@ main .product .tune-colors button:focus {
 }
 
 #blue {
-  background-color: #7ea1b8;
+  background-color: #59cedd;
 }
 
 #orange {
@@ -346,7 +346,7 @@ main .product .tune-colors button:focus {
 }
 
 #grey {
-  background-color: #7a7a7a;
+  background-color: #a0a0a0;
 }
 
 #gold {
@@ -357,12 +357,14 @@ main .product img {
   max-width: 580px;
   width: 100%;
   max-width: 580px;
+  filter: grayscale(1);
 }
 
 main .container {
   max-width: var(--mw-1440);
   width: 100%;
-  height: 100dvh;
+  max-height: 100dvh;
+  height: auto;
   position: relative;
   margin: auto;
   display: flex;
