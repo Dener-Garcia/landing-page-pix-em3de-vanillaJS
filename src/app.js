@@ -10,11 +10,11 @@ const productImg = document.querySelector(".product img")
 function changeImg(path) {
  
     productImg.setAttribute("src", path)
-    productImg.classList.toggle("fadeJS")
-    console.log("entrei na function")
+    productImg.classList.add("fadeJS")
+
 
     setTimeout(() => {
-        productImg.classList.toggle("fadeJS")
+        productImg.classList.remove("fadeJS")
     }, 200);
 }
 
@@ -23,22 +23,27 @@ btnWhite.addEventListener("click", () => {
 
     btnBlue.addEventListener("click", () => {
         changeImg(path = "/public/azul-off.opti.webp")
+        btnWhite.focus()
     })
 
     btnOrange.addEventListener("click", () => {
         changeImg(path = "/public/orange.opti.webp")
+        btnWhite.focus()
     })
 
     btnPink.addEventListener("click", () => {
         changeImg(path = "/public/pink.opti.webp")
+        btnWhite.focus()
     })
 
     btnGrey.addEventListener("click", () => {
         changeImg(path = "/public/grey.opti.webp")
+        btnWhite.focus()
     })
 
     btnGold.addEventListener("click", () => {
         changeImg(path = "/public/gold.opti.webp")
+        btnWhite.focus()
     })
 })
 
@@ -47,22 +52,27 @@ btnBlack.addEventListener("click", () => {
 
     btnBlue.addEventListener("click", () => {
         changeImg(path = "/public/azul-off-dark.opti.webp")
+        btnBlack.focus()
     })
 
     btnOrange.addEventListener("click", () => {
         changeImg(path = "/public/orange-dark.opti.webp")
+        btnBlack.focus()
     })
 
     btnPink.addEventListener("click", () => {
         changeImg(path = "/public/pink-dark.opti.webp")
+        btnBlack.focus()
     })
 
     btnGrey.addEventListener("click", () => {
         changeImg(path = "/public/grey-dark.opti.webp")
+        btnBlack.focus()
     })
 
     btnGold.addEventListener("click", () => {
         changeImg(path = "/public/gold-dark.opti.webp")
+        btnBlack.focus()
     })
 
 })
