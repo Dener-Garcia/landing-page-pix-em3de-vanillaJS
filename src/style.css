@@ -47,6 +47,7 @@ li {
   0% {
     transform: translateY(30px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -56,18 +57,24 @@ li {
   0% {
     transform: translateX(10px);
   }
+
   100% {
     transform: translateX(0);
   }
 }
 
 @keyframes fade {
-  0%{
+  0% {
     opacity: 0;
-  };
-  100%{
+  }
+
+  ;
+
+  100% {
     opacity: 1;
-  };
+  }
+
+  ;
 }
 
 .animation-up {
@@ -108,6 +115,7 @@ li {
 .moveX {
   animation: movingX 1s alternate ease-in-out infinite;
 }
+
 .moveX1 {
   animation: movingX 1s alternate 0.2s ease-in-out infinite;
 }
@@ -152,6 +160,10 @@ li {
   animation: fade 0.2s linear;
 }
 
+.inputSelected{
+  border: solid 2px var(--color-accent);
+}
+
 body {
   background-color: var(--color-primary);
 }
@@ -159,7 +171,7 @@ body {
 main .container-main {
   max-width: var(--mw-1440);
   width: 100%;
-  height: 100dvh;
+  height: auto;
   display: flex;
   margin: auto;
   justify-content: space-evenly;
@@ -176,10 +188,10 @@ main aside {
 main aside h1 {
   width: 100%;
   font-size: var(--fs-32);
-  color: var(--contrast-dark); 
+  color: var(--contrast-dark);
 }
 
-main aside h1 span{
+main aside h1 span {
   font-family: 'Monoton', cursive;
   color: var(--color-accent);
 }
@@ -287,72 +299,6 @@ main .product {
   gap: var(--sie-16);
 }
 
-main .product .product-tune {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: var(--sie-16);
-}
-
-main .product .product-tune label {
-  width: 100%;
-  font-size: var(--fs-18);
-  font-weight: var(--fw-tittle);
-}
-
-main .product h3 {
-  font-size: var(--fs-24);
-}
-
-main .tune-colors {
-  display: flex;
-  gap: 0.5rem;
-}
-
-main .product .tune-colors button {
-  width: 2rem;
-  height: 2rem;
-  border: solid 2px var(--color-tertiary);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-main .product .tune-colors button:hover,
-main .product .tune-colors button:focus {
-  transform: scale(1.3);
-  border-color: var(--color-accent);
-}
-
-#white {
-  background-color: #ced4d8;
-}
-
-#black {
-  background-color: #16191b;
-}
-
-#blue {
-  background-color: #59cedd;
-}
-
-#orange {
-  background-color: #e97312;
-}
-
-#pink {
-  background-color: #ff2b9f;
-}
-
-#grey {
-  background-color: #a0a0a0;
-}
-
-#gold {
-  background-color: #9e692d;
-}
-
 main .product img {
   max-width: 580px;
   width: 100%;
@@ -360,10 +306,86 @@ main .product img {
   filter: grayscale(1);
 }
 
+main .product h3 {
+  font-size: var(--fs-24);
+
+}
+
+main .product .product-tune {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: var(--sie-16);
+}
+
+main .product .product-tune label {
+
+  font-size: var(--fs-18);
+  font-weight: var(--fw-tittle);
+}
+
+main .product-tune .tune-colors {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 22px 34px;
+  gap: 32px;
+}
+
+input[type="radio"] {
+  position: relative;
+}
+
+input[type='radio']::after {
+  content: "";
+  position: absolute;
+  top: -0.75rem;
+  left: -0.75rem;
+  width: 2rem;
+  height: 2rem;
+  border: solid 2px var(--color-tertiary);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  transform: scale(1.3);
+}
+
+input[value="white"]::after {
+  background-color: #e4ecf1;
+}
+
+input[value="black"]::after {
+  background-color: #16191b;
+}
+
+input[value="blue"]::after {
+  background-color: #2e99b9;
+}
+
+input[value="orange"]::after {
+  background-color: #e9760a;
+}
+
+input[value="pink"]::after {
+  background-color: #ff51ae;
+}
+
+input[value="grey"]::after {
+  background-color: #9d9d9d;
+}
+
+input[value="gold"]::after {
+  background-color: #d1a22c;
+  
+}
+
+
 main .container {
   max-width: var(--mw-1440);
   width: 100%;
-  max-height: 100dvh;
   height: auto;
   position: relative;
   margin: auto;
@@ -445,6 +467,7 @@ main .container-use ul {
   gap: var(--sbe-24);
   font-size: var(--fs-24);
 }
+
 main .container-use ul li {
   display: flex;
   align-items: center;
@@ -514,7 +537,7 @@ footer .madeFor span a:hover {
 
   .btn-cta {
     width: 100%;
-    font-size: var(--fs-20);
+    font-size: var(--fs-18);
   }
 
   main .container-main {
@@ -569,11 +592,11 @@ footer .madeFor span a:hover {
 
   main .container-main .product .product-tune {
     flex-direction: column;
-    align-items: start;
+align-items: center;
   }
 
   main .container-main .product .product-tune a {
-margin: auto;
+    margin: auto;
     margin-top: var(--sbe-24);
   }
 
