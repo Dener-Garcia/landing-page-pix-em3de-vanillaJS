@@ -80,7 +80,7 @@ li {
 .animation-up {
   opacity: 0;
   transform: translateY(240px);
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .reveral-up {
@@ -90,7 +90,7 @@ li {
 
 .animation-left {
   transform: scale(0.01);
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .reveral-left {
@@ -100,7 +100,7 @@ li {
 .girlAnimation {
   transform: translate(280px);
   opacity: 0;
-  transition: 1.5s;
+  transition: 1s;
 }
 
 .girlAnimationOn {
@@ -141,6 +141,7 @@ li {
 }
 
 .btn-cta {
+ height: 64px;
   border: none;
   border-bottom: solid 0.5rem var(--color-tertiary);
   padding: 1rem 2rem;
@@ -319,8 +320,12 @@ main .product .product-tune {
   padding: var(--sie-16);
 }
 
-main .product .product-tune label {
+.tune-board-color,
+.tune-tag-color{
+  text-align: center;
+}
 
+main .product .product-tune label {
   font-size: var(--fs-18);
   font-weight: var(--fw-tittle);
 }
@@ -329,8 +334,20 @@ main .product-tune .tune-colors {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 22px 34px;
-  gap: 32px;
+  padding: var(--sie-16);
+  gap: var(--sie-16);
+}
+
+main .product-tune .tune-colors .custom-color{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sie-16);
+}
+
+main .product-tune .tune-colors .custom-color label{
+  font-size: var(--fs-14);
+  margin-bottom: 4px;
 }
 
 input[type="radio"] {
@@ -385,9 +402,8 @@ input[value="gold"]::after {
 
 main .container {
   max-width: var(--mw-1440);
-  width: 100%;
+  width: 80%;
   height: auto;
-  position: relative;
   margin: auto;
   display: flex;
   padding: 5rem 1rem;
@@ -400,6 +416,12 @@ main .container .illustration {
   border-radius: 100rem 100rem 5rem 5rem;
   padding: 2rem;
   background-color: var(--color-secundary);
+}
+
+main .container .container-description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 main .container .container-description h3 {
@@ -423,7 +445,7 @@ main .container .container-description h3::after {
 }
 
 main .container .container-description p {
-
+  width: 80%;
   margin-bottom: var(--sie-16);
   font-size: var(--fs-20);
 }
@@ -519,6 +541,7 @@ footer .madeFor {
 
 footer .madeFor span a {
   color: var(--contrast-light);
+  text-decoration: underline;
   transition: 0.2s;
 }
 
@@ -592,11 +615,15 @@ footer .madeFor span a:hover {
 
   main .container-main .product .product-tune {
     flex-direction: column;
-align-items: center;
+    align-items: center;
   }
 
   main .container-main .product .product-tune a {
     margin: auto;
+    margin-top: var(--sbe-24);
+  }
+
+  main .container-main .product .product-tune .tune-tag-color{
     margin-top: var(--sbe-24);
   }
 
@@ -619,6 +646,7 @@ align-items: center;
   }
 
   main .container .container-description p {
+    width: 100%;
     font-size: var(--fs-18);
   }
 
