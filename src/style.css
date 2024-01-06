@@ -186,10 +186,9 @@ main aside {
   height: 20rem;
 }
 
-main aside h1 {
-  width: 100%;
-  font-size: var(--fs-32);
-  color: var(--contrast-dark);
+main aside .logo-header svg{
+  width: 90%;
+  height: 100%;
 }
 
 main aside h1 span {
@@ -518,7 +517,7 @@ footer {
 }
 
 footer img {
-  width: 5rem;
+  width: auto;
   height: 5rem;
 }
 
@@ -527,6 +526,17 @@ footer p {
   font-size: var(--fs-18);
   color: var(--contrast-light);
   text-align: center;
+
+  a{
+    color: var(--color-accent);
+    text-decoration: underline;
+    font-weight: 500;
+    transition: 0.2s;
+
+    &:hover{
+      color: var(--color-primary);
+    }
+  }
 }
 
 footer .madeFor {
@@ -537,6 +547,7 @@ footer .madeFor {
   padding: var(--fs-16);
   background-color: var(--color-tertiary);
   color: #c7c7c7;
+  background-color: var(--color-tertiary);
 }
 
 footer .madeFor span a {
